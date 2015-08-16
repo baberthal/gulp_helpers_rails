@@ -18,6 +18,8 @@ gem 'sqlite3'
 gem 'pry-theme'
 gem 'pry'
 
+gem 'codeclimate-test-reporter', group: :test, require: nil
+
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-activemodel-mocks'
