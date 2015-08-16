@@ -1,7 +1,6 @@
 module GulpHelpers
   module Helpers
     module Util
-      # TODO: define REV_MANIFEST in an initializer
       def gulp_asset_path(path, options = {})
         options = options.symbolize_keys
         type ||= options[:type]

@@ -11,6 +11,7 @@ RSpec.describe GulpHelpers::Helpers::AssetTagHelper do
     @dummy.extend(ActionView::Helpers::TagHelper)
     @dummy.extend(ActionView::Helpers::AssetTagHelper)
     @dummy.extend(GulpHelpers::Helpers)
+    GulpHelpers.config.stylesheet_path = '/stylesheets'
   end
 
   it 'includes ActionView::Helpers::AssetTagHelper' do

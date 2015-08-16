@@ -13,7 +13,7 @@ require 'rails_helper'
 RSpec.describe HomeHelper, type: :helper do
   before :each do
     GulpHelpers.configure do |config|
-      config.stylesheet_path = '/whatever/stylesheets'
+      config.stylesheet_path = 'whatever/stylesheets'
     end
   end
 

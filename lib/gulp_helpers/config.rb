@@ -10,6 +10,18 @@ module GulpHelpers
       @image_path = options[:images]
     end
 
+    def stylesheet_path=(new_path)
+      @stylesheet_path = _filter(new_path)
+    end
+
+    def javascript_path=(new_path)
+      @javascript_path = _filter(new_path)
+    end
+
+    def image_path=(new_path)
+      @image_path = _filter(new_path)
+    end
+
     def merge_defaults(opts = {})
       opts.symbolize_keys!
       opts.each_value { |v| _filter(v) }
@@ -23,6 +35,7 @@ module GulpHelpers
 
     def _filter(string)
       string.insert(0, '/') unless string[0] == '/'
+      string
     end
   end
 end
