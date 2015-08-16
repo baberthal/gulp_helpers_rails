@@ -1,11 +1,15 @@
-require 'spec_helper'
+require 'rails_helper'
 
 RSpec.describe GulpHelpers do
   it 'has a version number' do
     expect(GulpHelpers::VERSION).to_not be nil
   end
 
-  it 'does something useful' do
-    expect(true).to be_truthy
+  describe '#asset_path' do
+    it 'can get and set the asset path' do
+      GulpHelpers.config
+      GulpHelpers.asset_path = 'public/assets'
+      expect(GulpHelpers.asset_path).to eq 'public/assets'
+    end
   end
 end

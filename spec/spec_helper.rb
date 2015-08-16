@@ -1,5 +1,10 @@
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter '/spec/'
+end
+
+require 'rspec'
+require 'gulp_helpers'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
@@ -15,9 +20,10 @@ RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.default_formatter = 'doc' if config.files_to_run.one?
 
-  config.warnings = true
-  config.profile_examples = 10
+  # config.profile_examples = 10
   config.order = :random
 
   Kernel.srand config.seed
 end
+
+class DummyClass; end

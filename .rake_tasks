@@ -1,0 +1,7 @@
+build
+clobber_rdoc
+install
+install:local
+rdoc
+release
+rerdoc

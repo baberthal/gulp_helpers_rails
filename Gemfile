@@ -13,15 +13,20 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+gem 'pry-rails'
+gem 'sqlite3'
+gem 'pry-theme'
+gem 'pry'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'rspec-activemodel-mocks'
-  gem 'pry-theme'
   gem 'rb-fsevent', require: false
   gem 'guard-rspec', require: false
   gem 'ruby_gntp'
   gem 'simplecov', require: false
   gem 'rubocop', require: false
+  gem 'guard-rubocop', require: false
+  gem 'guard-bundler', require: false
   gem 'colorize'
 end
